@@ -1,0 +1,8 @@
+ul.comment-list {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+ul.comment-list li {
+    text-decoration: none;
+}

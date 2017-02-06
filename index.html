@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="title" content="代码段 - 代码分享平台">
+    <link rel="stylesheet" href="//unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/bootstrap-social/4.11.0/bootstrap-social.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" id="navbar-brand-a" href="/"><img alt="代码段" src="/static/images/logo.png" /></a>
+          <p class="navbar-text">代码段</p>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{{ url_for('site_app.index') }}">首页</a></li>
+            <li><a href="{{ url_for('site_app.tags') }}">标签</a></li>
+            <li><a href="{{ url_for('bookmark_app.index') }}">收藏夹</a></li>
+          </ul>
+
+          <form action="/search" class="navbar-form navbar-left">
+            <input type="text" name="q" placeholder="搜索" class="form-control col-md-10" value="" />
+          </form>
+
+          <a href="/paste/create" class="btn btn-success navbar-btn share-btn">share</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="app">
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="pull-left footer-logo">
+          <img src="/static/images/logo_2x.png" />
+        </div>
+        <div class="pull-left footer-declaration">
+          <h2>代码段</h2>
+          <h4>分享, 收藏你的代码</h4>
+        </div>
+        <div class="pull-right">
+          <p>
+            <a href="http://blog.daimaduan.com/pages/about/">关于代码段</a> |
+            <a href="https://github.com/DoubleCiti/daimaduan.com">项目主页</a> |
+            <a href="https://github.com/DoubleCiti/daimaduan.com/issues/new">提交bug</a>
+          </p>
+          <p class="text-right"><a href="//www.upyun.com"><img src="//www.upyun.com/assets/league/90X45.png" /></a></p>
+        </div>
+        <div class="clearfix"></div>
+        <hr />
+        <span class="text-muted">© 2011 - 2016 <a href="https://github.com/DoubleCiti/daimaduan.com">daimaduan.com</a> All right reserved</span>
+        <span class="pull-right">
+          <small class="text-muted text-right">当前版本: {{ config['VERSION'] }} | 发布时间: {{ config['DEPLOYED_AT'] }} | 页面加载时间: {{ g.started_at | time_used }}</small>
+        </span>
+      </div>
+    </div>
+
+    <!-- built files will be auto injected -->
+    <script src="https://unpkg.com/jquery@3.1.1/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
