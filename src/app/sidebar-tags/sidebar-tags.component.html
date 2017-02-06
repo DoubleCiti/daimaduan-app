@@ -1,0 +1,6 @@
+<div class="panel panel-default">
+	<div class="panel-heading">热门标签</div>
+	<div class="panel-body">
+    <a *ngFor="let tag of tags" href="/tags/{{ tag.key }}" class="btn btn-xs btn-default tag" title="{{ tag.name }}">{{ tag.name }}</a>
+	</div>
+</div>

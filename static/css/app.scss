@@ -1,0 +1,265 @@
+//@extend-elements
+.container-fluid {
+	background: #333;
+}
+
+.container-fluid > .navbar-header > .navbar-text {
+	color: #fff;
+}
+
+.navbar {
+	border: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+	border-bottom: 2px solid #333;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: #ff8303;
+	border-bottom: 2px solid #ff830e;
+}
+
+#navbar-brand-a {
+	padding-right: 0;
+	margin-left: 10px;
+}
+
+.navbar-brand > img {
+	height: 22px;
+}
+
+%extend_1 {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+a {
+	&:hover {
+		text-decoration: none;
+		outline: none;
+	}
+	&:active {
+		text-decoration: none;
+		outline: none;
+	}
+	&:focus {
+		text-decoration: none;
+		outline: none;
+	}
+}
+body {
+	min-width: 320px;
+}
+#form-signin {
+	margin: 30px auto;
+	width: 600px;
+}
+#form-signup {
+	margin: 30px auto;
+	width: 600px;
+}
+pre {
+	overflow: auto;
+	//Instead of the line below you could use @include word-break($value)
+	word-break: normal;
+	word-wrap: normal;
+	&.panel-body {
+		border: 0;
+		margin: 0;
+		background: none;
+	}
+	code {
+		white-space: pre;
+	}
+}
+.name {
+	padding-right: 30px;
+	font-size: 24px;
+}
+.inline {
+	display: inline;
+}
+.tag {
+	margin-bottom: 3px;
+}
+.page-header {
+	margin-top: 0;
+}
+.input-xs {
+	height: 26px;
+	padding: 4px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 2px;
+}
+.bubble {
+	position: relative;
+	border: 1px solid #dddddd;
+	padding: 1px 5px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+	margin-left: 5px;
+	&:after {
+		@extend %extend_1;
+		border-color: rgba(255, 255, 255, 0);
+		border-right-color: white;
+		border-width: 3px 5px 3px 0;
+		margin-top: -3px;
+		margin-right: -1px;
+	}
+	&:before {
+		@extend %extend_1;
+		border-color: rgba(221, 221, 221, 0);
+		border-right-color: #dddddd;
+		border-width: 4px 5px 4px 0;
+		margin-top: -4px;
+	}
+}
+.paste {
+	margin-bottom: 30px;
+}
+.avatar-wrapper {
+	margin-top: 10px;
+}
+.input-group-embed {
+	max-width: 120px;
+	float: left;
+}
+@media(min-width: 480px) {
+	.input-group-embed {
+		max-width: 200px;
+	}
+	.paste-actions .action span {
+		display: inline;
+	}
+}
+@media(min-width: 768px) {
+	.input-group-embed {
+		max-width: 250px;
+	}
+}
+@media(min-width: 992px) {
+}
+@media(min-width: 1200px) {
+}
+.container .jumbotron {
+	padding: 20px;
+}
+.paste-metas a {
+	display: inline-block;
+	margin-left: 15px;
+	text-decoration: none;
+	&:hover {
+		color: #555;
+	}
+	.fa {
+		margin-right: 3px;
+	}
+}
+.paste-actions .action {
+	margin-left: 5px;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+.code .panel-body pre {
+	margin: -15px;
+	border: 0;
+	background-color: #FFF;
+}
+
+.code .panel-body {
+	padding: 0;
+}
+
+.highlighttable {
+	width: 100%;
+}
+
+.highlighttable pre {
+	border: 0;
+	border-radius: 0;
+}
+
+.code_preview {
+	max-height: 196px;
+	overflow: hidden;
+	padding: 0;
+	background-color: #FFF;
+}
+
+.footer {
+	padding-top: 20px;
+	padding-bottom: 100px;
+	background: #333;
+}
+
+.footer a {
+	color: #ff830e;
+}
+
+.footer-logo {
+	padding-right: 20px;
+	border-right: 2px solid #fff;
+}
+
+.footer-declaration {
+	margin-left: 10px;
+}
+
+.footer-declaration h2,
+.footer-declaration h4 {
+	color: #fff;
+}
+
+.footer-declaration h2 {
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+.footer-declaration h4 {
+	font-size: 14px;
+}
+
+.fcard > h3 {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+a.fcard {
+	margin-bottom: 10px;
+}
+.followings > .media {
+	margin-top: 15px;
+}
+
+.hljs {
+	background: none;
+}
+
+.code-table {
+	white-space: pre;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-size: 13px;
+}
+
+.code-table td.code-line-num {
+	text-align: right;
+	color: #BBB;
+}
+
+.code-table td {
+	padding: 0 10px;
+}
+
+.messages {
+	min-height: 500px;
+}
