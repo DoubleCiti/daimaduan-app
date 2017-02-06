@@ -1,0 +1,13 @@
+<div class="col-md-9">
+  <h4 class="page-header">最新代码</h4>
+
+  <section class="pastes">
+    <common-paste-view *ngFor="let paste of pastes" [paste]="paste"></common-paste-view>
+
+    <!--{{ render_pagination(pagination, url_for('site_app.index')) }}-->
+  </section>
+</div>
+
+<div class="col-md-3">
+    <sidebar-hot-tags></sidebar-hot-tags>
+</div>
