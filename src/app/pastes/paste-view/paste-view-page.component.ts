@@ -4,10 +4,8 @@ import { Title } from '@angular/platform-browser';
 
 import { Paste } from '../../common/models';
 import { PastesService } from '../../common/services/pastes.service';
-import { HotTagsComponent } from '../../sidebar/hot-tags/hot-tags.component';
 
 @Component({
-  selector: 'app-paste-view',
   templateUrl: './paste-view-page.component.html',
   styleUrls: ['./paste-view-page.component.css']
 })

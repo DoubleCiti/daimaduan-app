@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Paste } from '../../models';
 
@@ -8,12 +8,7 @@ import { Paste } from '../../models';
   styleUrls: ['./paste-view.component.css']
 })
 
-export class PasteViewComponent implements OnInit {
-  paste: Paste;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class PasteViewComponent {
+  @Input()
+  paste;
 }
