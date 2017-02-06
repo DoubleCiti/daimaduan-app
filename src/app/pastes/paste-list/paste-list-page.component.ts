@@ -5,11 +5,11 @@ import { Paste } from '../../common/models';
 import { PastesService } from '../../common/services/pastes.service';
 
 @Component({
-  templateUrl: './paste-list.component.html',
-  styleUrls: ['./paste-list.component.css']
+  templateUrl: './paste-list-page.component.html',
+  styleUrls: ['./paste-list-page.component.css']
 })
 
-export class PasteListComponent implements OnInit {
+export class PasteListPageComponent implements OnInit {
   pastes: Paste[] = [];
 
   constructor(private titleService: Title,

@@ -12,15 +12,14 @@ import { AppComponent } from './app.component';
 
 import { CommonModule } from './common/common.module';
 import { LayoutModule } from './layout/layout.module';
+import { SidebarModule } from './sidebar/sidebar.module';
 import { PastesModule } from './pastes/pastes.module';
 import { TagsModule } from './tags/tags.module';
-import { SidebarTagsComponent } from './sidebar-tags/sidebar-tags.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarTagsComponent,
     NotFoundComponent
   ],
   imports: [
@@ -29,6 +28,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HttpModule,
     CommonModule,
     LayoutModule,
+    SidebarModule,
     PastesModule,
     TagsModule,
     AppRoutingModule

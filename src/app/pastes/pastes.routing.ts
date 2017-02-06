@@ -1,17 +1,17 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { PasteListComponent } from './paste-list';
-import { PasteViewComponent } from './paste-view';
+import { PasteListPageComponent } from './paste-list/paste-list-page.component';
+import { PasteViewPageComponent } from './paste-view/paste-view-page.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: PasteListComponent
+        component: PasteListPageComponent
     },
     {
         path: 'pastes/:hashId',
-        component: PasteViewComponent
+        component: PasteViewPageComponent
     }
 ]
 

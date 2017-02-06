@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { PasteListComponent } from './paste-list';
-import { PasteViewComponent } from './paste-view';
+import { PasteListPageComponent } from './paste-list/paste-list-page.component';
+import { PasteViewPageComponent } from './paste-view/paste-view-page.component';
 import { PastesRoutingModule } from './pastes.routing';
 
 @NgModule({
@@ -11,8 +11,8 @@ import { PastesRoutingModule } from './pastes.routing';
         PastesRoutingModule
     ],
     declarations: [
-        PasteListComponent,
-        PasteViewComponent
+        PasteListPageComponent,
+        PasteViewPageComponent
     ]
 })
 

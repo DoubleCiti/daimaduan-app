@@ -5,9 +5,11 @@ import 'rxjs/add/operator/toPromise';
 
 import { Paste } from '../models';
 
+import { environment } from '../../../environments/environment';
+
 @Injectable()
 export class PastesService {
-  private url = 'http://127.0.0.1:8000/api/v1/pastes';
+  private url = environment.api_url + '/pastes';
 
   constructor(private http: Http) { }
 

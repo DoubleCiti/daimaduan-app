@@ -5,9 +5,11 @@ import 'rxjs/add/operator/toPromise';
 
 import { Tag } from '../models';
 
+import { environment } from '../../../environments/environment';
+
 @Injectable()
 export class TagsService {
-  private url = 'http://127.0.0.1:8000/api/v1/tags';
+  private url = environment.api_url + '/tags';
 
   constructor(private http: Http) { }
 
