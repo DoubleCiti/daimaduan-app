@@ -17,10 +17,14 @@ import { PastesModule } from './pastes/pastes.module';
 import { TagsModule } from './tags/tags.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { AuthGuard } from './common/auth.guard';
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     TagsModule,
     AppRoutingModule
   ],
-  providers: [ Title ],
+  providers: [ Title, AUTH_PROVIDERS ],
   bootstrap: [ AppComponent ]
 })
 

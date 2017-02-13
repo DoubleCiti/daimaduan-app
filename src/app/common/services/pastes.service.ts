@@ -29,7 +29,7 @@ export class PastesService {
                .then(response => response.json().paste as Paste)
                .catch(this.handleError);
   }
-  
+
   // createComment(model: Comment): Promise<Comment> {
   //   return this.http.post(this.url, model)
   //              .toPromise()
