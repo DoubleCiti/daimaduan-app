@@ -1,23 +1,21 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
 
-import { PasteListComponent } from './paste-list.component';
+import { PasteListPageComponent } from './paste-list-page.component';
 
 describe('PasteListComponent', () => {
-  let component: PasteListComponent;
-  let fixture: ComponentFixture<PasteListComponent>;
+  let component: PasteListPageComponent;
+  let fixture: ComponentFixture<PasteListPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PasteListComponent ]
+      declarations: [ PasteListPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PasteListComponent);
+    fixture = TestBed.createComponent(PasteListPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

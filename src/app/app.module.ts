@@ -5,8 +5,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AUTH_PROVIDERS } from 'angular2-jwt';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -17,7 +15,6 @@ import { PastesModule } from './pastes/pastes.module';
 import { TagsModule } from './tags/tags.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-import { AuthGuard } from './common/auth.guard';
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -37,7 +34,7 @@ import { LoginComponent } from './login/login.component';
     TagsModule,
     AppRoutingModule
   ],
-  providers: [ Title, AUTH_PROVIDERS ],
+  providers: [ Title ],
   bootstrap: [ AppComponent ]
 })
 
