@@ -2,7 +2,7 @@
   <h4 class="page-header">最新代码</h4>
 
   <section class="pastes">
-    <common-paste-view *ngFor="let paste of pastes" [paste]="paste"></common-paste-view>
+    <app-common-paste-view *ngFor="let paste of pastes" [paste]="paste"></app-common-paste-view>
 
     <!--{{ render_pagination(pagination, url_for('site_app.index')) }}-->
   </section>

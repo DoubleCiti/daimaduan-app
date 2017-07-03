@@ -17,7 +17,7 @@ export class LoginComponent {
 
   login(event, email, password) {
       event.preventDefault();
-      let body = JSON.stringify({ email, password });
+      const body = JSON.stringify({ email, password });
       this.http.post('http://localhost:8000/api/v1/users/login', body, { headers: contentHeaders })
         .subscribe(
           response => {

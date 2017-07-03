@@ -19,7 +19,7 @@ export class PastesService {
   getAllPastes(): Promise<Paste[]> {
     return this.http.get(this.url)
                .toPromise()
-               .then(response => response.json().pastes as Paste[])
+               .then(response => response.json().pastes as Paste[], reason => [])
                .catch(this.handleError);
   }
 
