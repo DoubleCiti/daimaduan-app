@@ -9,7 +9,7 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class PastesService {
-  private url = environment.api_url + '/pastes';
+  private url = environment.api_url + '/resources/pastes';
 
   constructor(private http: Http) { }
 
@@ -19,14 +19,14 @@ export class PastesService {
   getAllPastes(): Promise<Paste[]> {
     return this.http.get(this.url)
                .toPromise()
-               .then(response => response.json().pastes as Paste[], reason => [])
+               .then(response => response.json() as Paste[], reason => [])
                .catch(this.handleError);
   }
 
   getPasteById(hashId: string): Promise<Paste> {
     return this.http.get(this.url + '/' + hashId)
                .toPromise()
-               .then(response => response.json().paste as Paste)
+               .then(response => response.json() as Paste)
                .catch(this.handleError);
   }
 

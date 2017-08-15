@@ -4,6 +4,8 @@ import { Http } from '@angular/http';
 
 import { contentHeaders } from '../common/headers';
 
+import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,24 +18,24 @@ export class LoginComponent {
               public http: Http) { }
 
   login(event, email, password) {
-      event.preventDefault();
-      const body = JSON.stringify({ email, password });
-      this.http.post('http://localhost:8000/api/v1/users/login', body, { headers: contentHeaders })
-        .subscribe(
-          response => {
-            localStorage.setItem('id_token', response.json().id_token);
-            console.log(localStorage.getItem('id_token'));
-            this.router.navigateByUrl('/');
-          },
-          error => {
-            console.log(error.text());
-          }
-        );
-    }
+    event.preventDefault();
+    const body = JSON.stringify({ email, password });
+    this.http.post(environment.api_url + '/user/login', body, { headers: contentHeaders })
+      .subscribe(
+        response => {
+          localStorage.setItem('id', response.json().id);
+          console.log(localStorage.getItem('id'));
+          this.router.navigateByUrl('/');
+        },
+        error => {
+          console.log(error.text());
+        }
+      );
+  }
 
-    signup(event) {
-      event.preventDefault();
-      this.router.navigate(['signup']);
-    }
+  register(event) {
+    event.preventDefault();
+    this.router.navigate(['/user/register']);
+  }
 
 }

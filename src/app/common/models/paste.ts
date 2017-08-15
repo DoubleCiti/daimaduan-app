@@ -1,10 +1,10 @@
 import { Code } from './code';
 
 export class Paste {
-  hash_id: string;
+  hashId: string;
   title: string;
-  is_private: boolean;
-  views: number;
+  // is_private: boolean;
+  // views: number;
 
   codes: Code [];
 

@@ -1,4 +1,4 @@
-<div class="paste" id="paste-{{ paste.hash_id }}" *ngIf="paste">
+<div class="paste" id="paste-{{ paste.hashId }}" *ngIf="paste">
   <div class="media">
     <div class="media-left">
       <!--{{ render_user_avatar(paste.user, size=38) }}-->
@@ -11,16 +11,16 @@
         <a href="javascript:;" class="text-muted">
           <!--<span class="fa fa-heart-o"></span>{{ paste.likes_count }}-->
         </a>
-        <a href="/pastes/{{ paste.hash_id }}" class="text-muted">
+        <a href="/pastes/{{ paste.hashId }}" class="text-muted">
           <span class="fa fa-eye"></span>{{ paste.views }}
         </a>
-        <a href="/pastes/{{ paste.hash_id }}#comments" class="text-muted">
+        <a href="/pastes/{{ paste.hashId }}#comments" class="text-muted">
           <!--<span class="fa fa-comment"></span>{{ paste.comments_count }}-->
         </a>
       </div>
 
       <h5 class="media-heading">
-        <a href="/paste/{{ paste.hash_id }}" title="{{ paste.title }}">
+        <a href="/paste/{{ paste.hashId }}" title="{{ paste.title }}">
           {{ paste.title }}
         </a>
       </h5>
