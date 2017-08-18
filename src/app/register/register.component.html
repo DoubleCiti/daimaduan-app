@@ -1,20 +1,45 @@
- <div class="register jumbotron center-block">
-   <h1>Register</h1>
-   <form role="form" (submit)="register($event, email.value, username.value, password.value)">
-   <div class="form-group">
-     <label for="email">Email</label>
-     <input type="text" #email class="form-control" id="email" placeholder="Email">
-   </div>
-   <div class="form-group">
-     <label for="username">Username</label>
-     <input type="text" #username class="form-control" id="username" placeholder="Username">
-   </div>
-   <div class="form-group">
-     <label for="password">Password</label>
-     <input type="password" #password class="form-control" id="password" placeholder="Password">
-   </div>
-   <button type="submit" class="btn btn-default">Submit</button>
-     <!--<a [routerLink]="['/signup']">Click here to Signup</a>-->
- </form>
- </div>
- 
+<md-card fxFlex="100%">
+  <md-card-title>注册新账户</md-card-title>
+
+  <md-card-content>
+    <form role="form" (submit)="register($event, email.value, username.value, password.value)">
+      <p>
+        <md-input-container fxFlex="400px">
+          <input mdInput #email placeholder="Email" [formControl]="emailFormControl">
+          <md-error *ngIf="emailFormControl.hasError('pattern')">
+            Please enter a valid email address
+          </md-error>
+          <md-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </md-error>
+        </md-input-container>
+      </p>
+
+      <p>
+        <md-input-container fxFlex="400px">
+          <input mdInput #email placeholder="Username" [formControl]="usernameFormControl">
+          <md-error *ngIf="usernameFormControl.hasError('pattern')">
+            Please enter a valid username
+          </md-error>
+          <md-error *ngIf="usernameFormControl.hasError('required')">
+            Username is <strong>required</strong>
+          </md-error>
+        </md-input-container>
+      </p>
+
+      <p>
+        <md-input-container fxFlex="400px">
+          <input mdInput type="password" #password maxlength="12" placeholder="Password" [formControl]="passwordFormControl">
+          <md-error *ngIf="passwordFormControl.hasError('required')">
+            Password is <strong>required</strong>
+          </md-error>
+          <md-hint align="end">{{ password.value.length }} / 12</md-hint>
+        </md-input-container>
+      </p>
+
+      <p>
+        <button md-button type="submit">注册</button>
+      </p>
+    </form>
+  </md-card-content>
+</md-card>

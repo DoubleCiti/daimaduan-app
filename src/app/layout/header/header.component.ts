@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  providers: [ ]
 })
 
 export class HeaderComponent implements OnInit {
