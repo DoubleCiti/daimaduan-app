@@ -19,6 +19,7 @@ export class LoginComponent {
 
   login(event, email, password) {
     event.preventDefault();
+
     const body = JSON.stringify({ email, password });
     this.http.post(environment.api_url + '/user/login', body, { headers: contentHeaders })
       .subscribe(
@@ -35,7 +36,8 @@ export class LoginComponent {
 
   register(event) {
     event.preventDefault();
-    this.router.navigate(['/user/register']);
+
+    this.router.navigate(['/register']);
   }
 
 }
