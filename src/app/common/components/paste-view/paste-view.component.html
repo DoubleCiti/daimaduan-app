@@ -1,35 +1,9 @@
-<div id="paste-{{ paste.hashId }}" *ngIf="paste">
-  <div class="media">
-    <div class="media-left">
-      <!--{{ render_user_avatar(paste.user, size=38) }}-->
-    </div>
-    <div class="media-body">
-      <div class="paste-metas pull-right">
-        <a href="#" class="text-muted">
-          <!--<span class="fa fa-code"></span>{{ paste.codes | length }}-->
-        </a>
-        <a href="javascript:;" class="text-muted">
-          <!--<span class="fa fa-heart-o"></span>{{ paste.likes_count }}-->
-        </a>
-        <a href="/pastes/{{ paste.hashId }}" class="text-muted">
-          <span class="fa fa-eye"></span>{{ paste.views }}
-        </a>
-        <a href="/pastes/{{ paste.hashId }}#comments" class="text-muted">
-          <!--<span class="fa fa-comment"></span>{{ paste.comments_count }}-->
-        </a>
-      </div>
-
-      <h5 class="media-heading">
-        <a href="/paste/{{ paste.hashId }}" title="{{ paste.title }}">
-          {{ paste.title }}
-        </a>
-      </h5>
-
-      <p class="text-muted">
-        <!--<small>最后更新于 {{ paste.updated_at | time_passed }}</small>-->
-      </p>
-
-    </div>
+<div class="card" id="paste-{{ paste.hashId }}" *ngIf="paste">
+  <div class="card-body">
+    <h4 class="card-title"><a href="/paste/{{ paste.hashId }}" title="{{ paste.title }}">{{ paste.title }}</a></h4>
+    <h6 class="card-subtitle mb-2 text-muted">
+      <!--<small>最后更新于 {{ paste.updated_at | time_passed }}</small>-->
+    </h6>
 
     <!--<p class="paste-tags">
       {% for tag in paste.tags %}
@@ -37,17 +11,19 @@
       {% endfor %}
     </p>-->
 
-    <div class="clearfix"></div>
+    <!-- <div class="clearfix"></div> -->
 
-    <div class="code panel panel-default" *ngFor="let code of paste.codes">
-      <div class="panel-heading">
+    <div class="card" *ngFor="let code of paste.codes">
+      <div class="card-body">
         <!--<span class="pull-right">{{ render_tag(code.syntax, style='info') }}</span>-->
-        <span>{{ code.title }}</span>
-        <a class="btn btn-xs copy-code" data-toggle="tooltip" data-placement="right" title="已复制">复制代码到剪贴板</a>
+        <h4 class="card-title">{{ code.title }}</h4>
+        <!-- <a class="btn btn-xs copy-code" data-toggle="tooltip" data-placement="right" title="已复制">复制代码到剪贴板</a> -->
       </div>
-      <div class="panel-body" style="overflow-x: auto;">
-          <pre><code>{{ code.content }}</code></pre>
+      <!-- <div class="panel-body" style="overflow-x: auto;"> -->
+      <div class="container">
+        <pre><code>{{ code.content }}</code></pre>
       </div>
+      <!-- </div> -->
     </div>
 
   </div>

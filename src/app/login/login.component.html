@@ -1,33 +1,19 @@
-<md-card fxFlex="100%">
-  <md-card-title>登录</md-card-title>
+<div class="card">
+  <div class="card-header">登录</div>
 
-  <md-card-content>
+  <div class="card-body">
     <form role="form" (submit)="login($event, email.value, password.value)">
-      <p>
-        <md-input-container fxFlex="400px">
-          <input mdInput #email placeholder="Email" [formControl]="emailFormControl">
-          <md-error *ngIf="emailFormControl.hasError('pattern')">
-            Please enter a valid email address
-          </md-error>
-          <md-error *ngIf="emailFormControl.hasError('required')">
-            Email is <strong>required</strong>
-          </md-error>
-        </md-input-container>
-      </p>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" placeholder="Email" [formControl]="emailFormControl" />
+      </div>
 
-      <p>
-        <md-input-container fxFlex="400px">
-          <input mdInput type="password" #password maxlength="12" placeholder="Password" [formControl]="passwordFormControl">
-          <md-error *ngIf="passwordFormControl.hasError('required')">
-            Password is <strong>required</strong>
-          </md-error>
-          <md-hint align="end">{{ password.value.length }} / 12</md-hint>
-        </md-input-container>
-      </p>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" maxlength="12" placeholder="Password" [formControl]="passwordFormControl" />
+      </div>
 
-      <p>
-        <button md-button type="submit">登录</button>
-      </p>
+      <button type="submit" class="btn btn-raised btn-primary">Submit</button>
     </form>
-  </md-card-content>
-</md-card>
+  </div>
+</div>
