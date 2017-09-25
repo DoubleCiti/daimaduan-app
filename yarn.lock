@@ -105,11 +105,11 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/compiler-cli@^4.3.5":
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-4.3.5.tgz#24e99b36c0909363ff8247bf331a8b89eaedfe63"
+"@angular/compiler-cli@^4.4.3":
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-4.4.3.tgz#183af81f141186b8d660b06429592d40b7540a4a"
   dependencies:
-    "@angular/tsc-wrapped" "4.3.5"
+    "@angular/tsc-wrapped" "4.4.3"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
 
@@ -157,15 +157,23 @@
   dependencies:
     tslib "^1.7.1"
 
+"@angular/platform-server@^4.4.3":
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-4.4.3.tgz#e65dce9de54d6ca6649cc9894c5c7a3247baaf4c"
+  dependencies:
+    parse5 "^3.0.1"
+    tslib "^1.7.1"
+    xhr2 "^0.1.4"
+
 "@angular/router@^4.3.5":
   version "4.3.5"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-4.3.5.tgz#188082747bc9b6974f9d4b3f5557b434645d23cd"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/tsc-wrapped@4.3.5":
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-4.3.5.tgz#95fdaa813cfc57262fc7ef5fea726d628aefabac"
+"@angular/tsc-wrapped@4.4.3":
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-4.4.3.tgz#2d3f38210a1d4db03fc86dcf1e095812b85cd119"
   dependencies:
     tsickle "^0.21.0"
 
@@ -3812,6 +3820,12 @@ parse-json@^2.2.0:
   dependencies:
     error-ex "^1.2.0"
 
+parse5@^3.0.1:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-3.0.2.tgz#05eff57f0ef4577fb144a79f8b9a967a6cc44510"
+  dependencies:
+    "@types/node" "^6.0.46"
+
 parsejson@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/parsejson/-/parsejson-0.0.3.tgz#ab7e3759f209ece99437973f7d0f1f64ae0e64ab"
@@ -5802,6 +5816,10 @@ ws@1.1.2, ws@^1.0.1:
 wtf-8@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wtf-8/-/wtf-8-1.0.0.tgz#392d8ba2d0f1c34d1ee2d630f15d0efb68e1048a"
+
+xhr2@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/xhr2/-/xhr2-0.1.4.tgz#7f87658847716db5026323812f818cadab387a5f"
 
 xml-char-classes@^1.0.0:
   version "1.0.0"
