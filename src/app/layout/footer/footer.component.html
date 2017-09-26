@@ -1,4 +1,33 @@
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/popper.js@1.12.5/dist/umd/popper.js" integrity="sha384-KlVcf2tswD0JOTQnzU4uwqXcbAy57PvV48YUiLjqpk/MJ2wExQhg9tuozn5A1iVw" crossorigin="anonymous"></script>
-<script src="../node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.min.js" integrity="sha384-hC7RwS0Uz+TOt6rNG8GX0xYCJ2EydZt1HeElNwQqW+3udRol4XwyBfISrNDgQcGA" crossorigin="anonymous"></script>
-<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<nav class="navbar navbar-dark bg-dark mt-5 py-5">
+  <div class="container">
+    <div class="d-flex justify-content-start">
+      <div class="p-2">
+        <img src="/assets/images/logo_2x.png" />
+      </div>
+
+      <div class="p-2">
+        <h3 class="text-white">代码段</h3>
+        <h5 class="text-white">分享/收藏你的代码</h5>
+      </div>
+
+      <div class="ml-auto p-2">
+          <a href="http://blog.daimaduan.com/pages/about/">关于代码段</a> |
+          <a href="https://github.com/DoubleCiti/daimaduan.com">项目主页</a> |
+          <a href="https://github.com/DoubleCiti/daimaduan.com/issues/new">提交bug</a>
+        <!-- <p class="text-right"><a href="//www.upyun.com"><img src="//www.upyun.com/assets/league/90X45.png" /></a></p> -->
+      </div>
+    </div>
+
+    <hr />
+
+    <p class="text-muted">© 2011 - 2017 <a href="https://github.com/DoubleCiti/daimaduan.com">daimaduan.com</a> All right reserved</p>
+  </div>
+</nav>
+
+<script>
+    $(document).ready(function() {
+        $('body').bootstrapMaterialDesign();
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    });
+</script>

@@ -3,3 +3,4 @@
     box-sizing: content-box;
 }
 @import '../node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.min.css';
+@import '../node_modules/highlight.js/styles/darcula.css';
