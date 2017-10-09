@@ -1,6 +1,6 @@
-<div class="card" id="paste-{{ paste.hashId }}" *ngIf="paste">
+<div class="card" id="paste-{{ paste.id }}" *ngIf="paste">
   <div class="card-body">
-    <h4 class="card-title"><a href="/paste/{{ paste.hashId }}" title="{{ paste.title }}">{{ paste.title }}</a></h4>
+    <h4 class="card-title"><a href="/paste/{{ paste.id }}" title="{{ paste.title }}">{{ paste.title }}</a></h4>
     <h6 class="card-subtitle mb-2 text-muted">
       <small>最后更新于 {{ paste.updated_at }}</small>
     </h6>
